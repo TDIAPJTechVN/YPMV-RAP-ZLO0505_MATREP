@@ -1,0 +1,167 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Material Report',
+    typeNamePlural: 'Material Report'
+}
+
+annotate entity ZC_LO05_05_MAT with
+{
+
+  @UI.lineItem: [{   position: 1, label: 'Material Code' }]
+  @UI.selectionField: [{ position: 10 }]
+  Product;
+   @UI.lineItem: [{  position: 2, label: 'Mô tả tiếng Việt' }]
+  @UI.selectionField: [{ position: 20 }]
+  ProductNameVI;
+  @UI.lineItem: [{  position: 2, label: 'Mô tả tiếng Anh' }]
+  @UI.selectionField: [{ position: 20 }]
+  ProductName;
+ 
+  @UI.lineItem: [{  position: 3, label: 'Long Text' }]
+  ZLONGTEXT;
+  @UI.lineItem: [{  position: 4,label:'MOQ' }]
+  MOQ;
+  @UI.lineItem: [{  position: 5, label: 'Lead Time(ngày)' }]
+  LeadTime; //leadtime
+  @UI.lineItem: [{  position: 6, label: 'Maker' }]
+  Maker;
+  @UI.lineItem: [{  position: 7, label: 'Quốc gia xuất xứ' }]
+  CountryOfOrigin;
+  @UI.lineItem: [{  position: 8, label: 'Base Unit' }]
+  BaseUnit;
+  @UI.lineItem: [{  position: 9, label: 'Order Unit' }]
+  PurchaseOrderQuantityUnit;
+  @UI.lineItem: [{  position: 10, label: 'Selling Price' }]
+  SellingPrice;
+  @UI.lineItem: [{  position: 11, label: 'Currency' }]
+  CurrencyPIR;
+  @UI.lineItem: [{  position: 12, label: 'VAT' }]
+  ZVAT;
+  @UI.lineItem: [{  position: 13, label: 'Mã sản phẩm nhà cung cấp' }]
+  ProductManufacturerNumber;
+  @UI.lineItem: [{  position: 14, label: 'Tên sản phẩm nhà cung cấp' }]
+  SupplierMaterialNumber; //Supplier Material Number
+  @UI.lineItem: [{  position: 15, label: 'Ngày bắt đầu hiệu lực báo giá' }]
+  ZAvaibStartDate;
+  @UI.lineItem: [{  position: 16, label: 'Ngày kết thúc hiệu lực báo giá' }]
+  ZAvaibEndDate;
+  @UI.lineItem: [{  position: 17, label: 'Supplier Code' }]
+  Supplier; //Supplier
+  @UI.lineItem: [{  position: 18, label: 'Supplier Short Name'  }]
+
+  SupplierName; //Supplier
+  @UI.lineItem: [{  position: 19, label: 'YPMV PIC' }]
+  SupplierRespSalesPersonName;
+  @UI.lineItem: [{  position: 20, label: 'Loại sản phẩm' }]
+  @UI.selectionField: [{ position: 30 }]
+  ProductType;
+  @UI.lineItem: [{  position: 21, label: 'Dòng sản phẩm' }]
+  @UI.selectionField: [{ position: 40 }]
+  ProductGroup;
+  @UI.lineItem: [{  position: 22, label: 'Nhánh sản phẩm' }]
+  //  @UI.selectionField: [{ position: 30 }]
+  ExternalProductGroup;
+
+  //  @UI.lineItem: [{  position: 2, label: 'Plant' }]
+  @UI.selectionField: [{ position: 30 }]
+  Plant;
+  //  MOQ;
+  @UI.hidden: true
+  PurgDocOrderQuantityUnit;
+  @UI.hidden: true
+  PurchasingInfoRecord;
+
+  //  @UI.hidden: true
+  //  TaxCode;
+  //  //      _tax.ConditionRateRatioUnit                                     as VAT,
+
+  //  PurchasingGroup;
+
+  //  @UI.lineItem: [{  position: 17, label: 'External Product Group' }]
+  //  ExternalProductGroup;
+  //  @UI.lineItem: [{  position: 18, label: 'Volume' }]
+  //  MaterialVolume;
+  //  @UI.lineItem: [{  position: 19, label: 'Volume Unit' }]
+  //  VolumeUnit;
+  //  @UI.lineItem: [{  position: 20, label: 'Gross Weight' }]
+  //  GrossWeight;
+  //  @UI.lineItem: [{  position: 21, label: 'Net Weight' }]
+  //  NetWeight;
+  //  @UI.hidden: true
+  //  WeightUnit;
+  //  @UI.lineItem: [{  position: 22, label: 'Batch Management' }]
+  //  IsBatchManagementRequired;
+  //  @UI.lineItem: [{  position: 23, label: 'QM in Procurement is Active' }]
+  //  QltyMgmtInProcmtIsActive;
+  //  @UI.lineItem: [{  position: 24, label: 'Valuation Area' }]
+  //  ValuationArea;
+  //  @UI.lineItem: [{  position: 25, label: 'Valuation Class' }]
+  //  ValuationClass;
+  //  @UI.lineItem: [{  position: 26, label: 'Price Control' }]
+  //  InventoryValuationProcedure;
+  //  @UI.lineItem: [{  position: 27, label: 'Price Control Determine' }]
+  //  PriceDeterminationControl;
+  //  @UI.lineItem: [{  position: 28, label: 'Currency' }]
+  @UI.hidden: true
+  CurrencyVal;
+  //  @UI.lineItem: [{  position: 29, label: 'Inventory Price Moving Average' }]
+  //  MovingAveragePrice;
+  //  @UI.lineItem: [{  position: 30, label: 'Standard Price' }]
+  //  StandardPrice;
+  //  @UI.lineItem: [{  position: 31, label: 'Price Unit Quantity' }]
+  //  PriceUnitQty;
+  //  //      _cost.IsMaterialCostedWithQtyStruc,
+  //  //      _cost.CostOriginGroup,
+  //  //      _cost.CostingOverheadGroup,
+  //  @UI.lineItem: [{  position: 32, label: 'Plant' }]
+  //  Plant;
+  //  @UI.lineItem: [{  position: 33, label: 'Availability check' }]
+  //  AvailabilityCheckType;
+  //  @UI.lineItem: [{  position: 34, label: 'Profit Center' }]
+  //  ProfitCenter;
+  //  @UI.lineItem: [{  position: 35, label: 'MRP Type' }]
+  //  MRPType;
+  //  @UI.lineItem: [{  position: 36, label: 'Controller' }]
+  //  MRPResponsible;
+  //  @UI.lineItem: [{  position: 37, label: 'MRP Group' }]
+  //  MRPGroup;
+  //  @UI.lineItem: [{  position: 38, label: 'Strategy Group' }]
+  //  PlanningStrategyGroup;
+  //  @UI.lineItem: [{  position: 39, label: 'Reorder Point' }]
+  //  ReorderThresholdQuantity;
+  //  @UI.lineItem: [{  position: 40, label: 'Safety Stock' }]
+  //  SafetyStockQuantity;
+  //  @UI.lineItem: [{  position: 41, label: 'Issue Storage Location' }]
+  //  ProductionInvtryManagedLoc;
+  //  @UI.lineItem: [{  position: 42, label: 'Indicator: Backflush' }]
+  //  MatlCompIsMarkedForBackflush;
+  //  @UI.lineItem: [{  position: 43, label: 'Production Supervisor' }]
+  //  ProductionSupervisor;
+  //  @UI.lineItem: [{  position: 44, label: 'Procurement Type' }]
+  //  ProcurementType;
+  //  @UI.lineItem: [{  position: 45, label: 'Lot Sizing Procedure' }]
+  //  LotSizingProcedure;
+  //  @UI.lineItem: [{  position: 46, label: 'Individual / Collective Requirements' }]
+  //  DependentRequirementsType;
+  //
+  //  @UI.lineItem: [{  position: 47, label: 'Sales Organization' }]
+  //  ProductSalesOrg;
+  //  @UI.lineItem: [{  position: 48, label: 'Distribution Channel' }]
+  //  ProductDistributionChnl;
+  //  @UI.lineItem: [{  position: 0, label: 'Sales Unit' }]
+  //  @UI.hidden: true
+  //  SalesMeasureUnit;
+  //  @UI.lineItem: [{  position: 50, label: 'Delivering Plant' }]
+  //  SupplyingPlant;
+  //  @UI.lineItem: [{  position: 51, label: 'Account Assignment Group' }]
+  //  AccountDetnProductGroup;
+  //  @UI.lineItem: [{  position: 52, label: 'Item Category Group' }]
+  //  ItemCategoryGroup;
+  //  @UI.lineItem: [{  position: 53, label: 'Country/Region' }]
+  //  Country;
+  //  @UI.lineItem: [{  position: 54, label: 'Tax Condition Type' }]
+  //  TaxCategory;
+  //  @UI.lineItem: [{  position: 55, label: 'Tax Classification' }]
+  //  TaxClassification;
+
+}

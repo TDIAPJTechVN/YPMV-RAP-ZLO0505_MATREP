@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition of Mat Report'
+define service ZSR_C_LO05_05_MAT {
+  expose ZC_LO05_05_MAT;
+}

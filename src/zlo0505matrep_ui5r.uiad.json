@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Material Report"
+  },
+  "ui5AppDetails": {
+    "appId": "lo05matreport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FD781FDF11EF715D2E8D9635563FEAEC7EBC9896_TM",
+    "semanticObject": "yy1_matreport",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FD781FDF11EF715D2E8D9635563FEAEC7EBC9896_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Report"
+      }
+    }
+  ]
+}
